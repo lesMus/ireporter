@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Add New Record - iReporter </title>
+
+<link rel="stylesheet" href="style.css" type="text/css">
+
+</head>
+<body>
+
+<div id="container" >
+  <div id="header" >
+    <h1>iReporter </h1>
+  </div>
+  
+      <div class="wrapper_text" >
+       
+            <div class="forminfo">Create a new Report   </div>
+
+            <form action="#">
+              
+            
+              <div class="container">
+                
+                <p>
+                <label><b>Report type</b></label><br>
+                <select>
+                        <option value="" selected disabled hidden>Select </option>
+                        <option value="red-flag">Red-Flag</option>
+                        <option value="intervention">Intervention</option>
+                     
+                      </select>
+                </p>
+             
+                
+
+                <label for="title"><b>Title</b></label>
+                <br><input type="text" name="title" > 
+
+                <P>
+                  <label><b>Short Description</b></label><br>
+                  <input type="text" height="30mm"  name=description">
+                  </P>
+                  
+                </P>
+
+                <p>
+               <label><b>Upload Image</b></label><br>
+                <input type="file" name="image" > 
+                </p>
+
+
+                <p>
+                <label><b>Upload Video</b></label><br>
+                <input type="file" name="Video" > 
+                </p>
+
+                <p>
+                <label><b>Add geolocation</b></label><br>
+                <input type="text" name="geolocation" > 
+                </p>
+         
+         
+            
+                
+            
+            
+                <button type="submit">Submit</button>
+                
+              </div>
+            </form>
+
+
+  
+  </div>
+
+<div id = "footer">
+
+</div>
+
+</div>
+</body>
+</html>
