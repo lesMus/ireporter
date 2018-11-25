@@ -9,21 +9,30 @@
 </head>
 <body>
 
+
+   <!-- Navbar -->
+<div class="topnav">
+    
+      <a class="active" href="index.html" >iReporter</a> 
+      <a href="admin-login.html" ">Admin</a>
+      
+      <!-- Right-sided  -->
+      <div class="topnav-smallText">
+         <a href="#"> About</a>
+         <a href="#" >FAQ</a>
+         <a href="#">Contact</a>
+      </div>      
+</div>
 <div id="container" >
   <div id="header" >
     <h1>iReporter </h1>
   </div>
   
-      <div class="wrapper_text" >
-       
-            <div class="forminfo">Create a new Report   </div>
+       <div class="title-head">Create a new Report   </div>
 
             <form action="#">
-              
-            
-              <div class="container">
-                
-                <p>
+             
+              <p>
                 <label><b>Report type</b></label><br>
                 <select>
                         <option value="" selected disabled hidden>Select </option>
@@ -33,52 +42,36 @@
                       </select>
                 </p>
              
-                
-
+              <fieldset>
+                <legend>Description</legend>
                 <label for="title"><b>Title</b></label>
                 <br><input type="text" name="title" > 
 
                 <P>
-                  <label><b>Short Description</b></label><br>
-                  <input type="text" height="30mm"  name=description">
+                  <label>Short Description</label><br>
+                  <textarea id = "myTextArea" rows = "3" cols = "50"></textarea>
                   </P>
-                  
-                </P>
-
-                <p>
+                  <p>
+                <label><b>Add geolocation</b></label><br>
+                <input type="text" name="geolocation" > 
+                </p>
+              </fieldset>    
+        
+              <p>
+              <fieldset>
+                    <legend> Supporting elements</legend>
                <label><b>Upload Image</b></label><br>
                 <input type="file" name="image" > 
-                </p>
-
-
+                
                 <p>
                 <label><b>Upload Video</b></label><br>
                 <input type="file" name="Video" > 
                 </p>
-
-                <p>
-                <label><b>Add geolocation</b></label><br>
-                <input type="text" name="geolocation" > 
-                </p>
+             </fieldset>
          
-         
-            
-                
-            
-            
-                <button type="submit">Submit</button>
-                
-              </div>
-            </form>
+         <button type="submit">Submit</button>
+        </form>
 
-
-  
-  </div>
-
-<div id = "footer">
-
-</div>
-
-</div>
+     </div>
 </body>
 </html>
