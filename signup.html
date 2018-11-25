@@ -1,14 +1,29 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Sign Up - iReporter</title>
-<link rel="stylesheet" href="style.css" type="text/css">
-
+<title>Sig Up-iReporter</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
+
+ <!-- Navbar (sit on top) -->
+<div class="topnav">
+    
+      <a class="active" href="#about" >iReporter</a> 
+      <a href="admin-login.html" ">Admin</a>
+      
+      <!-- Right-sided navbar links -->
+      <div class="topnav-smallText">
+         <a href="#"> About</a>
+         <a href="#" >FAQ</a>
+         <a href="#">Contact</a>
+      </div>    
+  
+  
+</div>
+
+                                                              
 <div id="container" >
   <div id="header" >
     <h1>iReporter </h1>
@@ -16,21 +31,21 @@
   
       <div class="wrapper_text" >
        
-            <div class="forminfo"> Sign Up  </div>
+            <div class="title-head"> Sign Up  </div>
 
-            <form action="#">
+            <form action="login.html">
               
             
               <div class="container">
-                <label for="fname"><b>Firstname</b></label>
-                <br><input type="text" name="fname" required> 
+                <label for="fname">Firstname</label><br>
+                <input type="text" name="fname" required> 
             
                 <p>
-                <label for="lname"><b>Lastname</label> <br>
+                <label for="lname">Lastname</label> <br>
                 <input type="text" name="lname" required >
                 </p> 
                 
-                <lable for ="email" ><b>Email</b></lable> <br>
+                <lable for ="email" >Email</lable> <br>
                 <input type="text"    >
             
 
@@ -43,12 +58,6 @@
                 <label  >Password</label>   <br>
                 <input  type="password" name="password"  required>   </p>
 
-                <p></p><label >Confirm Password</label><br>
-                <input type="password"  name="pwd"  required></p>
-
-
-            
-            
                 <button type="submit">Register</button>
                 
               </div>
@@ -56,12 +65,14 @@
 
 
   
-  </div>
+          </div>
 
-<div id = "footer">
+     <div id = "footer">
 
-</div>     
+    </div>     
 
 </div>
+
+
 </body>
 </html>
