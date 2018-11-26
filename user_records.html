@@ -2,25 +2,36 @@
 <html>
 <head>
 <title>My Records - iReporter</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 <link rel="stylesheet" href="style.css" type="text/css">
 
 </head>
 <body>
 
+   <!-- Navbar -->
+<div class="topnav">
+    
+      <a class="active" href="#about" >iReporter</a> 
+      <a href="admin-login.html" ">Admin</a>
+      
+      <!-- Right-sided navbar links -->
+      <div class="topnav-smallText">
+         <a href="#"> About</a>
+         <a href="#" >FAQ</a>
+         <a href="#">Contact</a>
+      </div>    
+</div>
+
+
 <div id="container" >
 
     <div id="header" >
         <h1>iReporter </h1>
-       </div>
+    </div>
 
 
+<div class = "title-head" >My Dashboard</div>
 
-       <button type="submit" onclick="window.location.href='addNewRecord.html'">Create a new record </button>
-<h2>My Dashboard</h2>
-
-<table style="width:80%" caption >
+ <table style="width:80%" caption >
   <caption>Red-Flags</caption> <br>
     <tr>
       <th>Drafts</th>
@@ -53,31 +64,91 @@
   
     </table>
 
+    <p>
+   <button type="submit" onclick="window.location.href='addNewRecord.html'">Create a new record </button>
+ </p>
+ 
+   <div class="title-head">All Reports</div>  
 
-<h2>All records</h2>
 
+  <div class="tab">
+  <button class="tablinks" onclick="openRecord(event, 'red-flag')" id="defaultOpen">Red Flags</button>
+  <button class="tablinks" onclick="openRecord(event, 'intervention')">Interventions</button>
+  
+  </div>
 
-<table style="width:100%" caption >
-    <caption>My reports</caption> <br>
+<div id="red-flag" class="tabcontent">
+
+ <table   >
+    <caption>Red Flags</caption> <br>
       <tr>
-        <th>Red_Flags</th>
-        <th>Status</th> 
-        <th>Interventions</th>
+        <th>Id</th>
+        <th>Name</th> 
+        <th>Date Created</th>
         <th>Status</th>
+        <th> Action </th>
       </tr>
       <tr>
+        <td>3353</td>
+        <td>abcd</td>
+        <td>404112015</td>
         <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th>
+           <button class ="report-action" type="submit" onclick="window.location.href='#'">Edit </button>
+           <button class ="report-action" type="submit" onclick="window.location.href='#'"  style="background-color: red">Delete </button>   
+        </th>
       </tr>
   
     </table>
 
-
-
-  <div id="footer"></div>
 </div>
+
+<div id="intervention" class="tabcontent">
+  <table   >
+    <caption>Interventions</caption> <br>
+      <tr>
+        <th>Id</th>
+        <th>Name</th> 
+        <th>Date Created</th>
+        <th>Status</th>
+        <th> Action </th>
+      </tr>
+      <tr>
+        <td>2323</td>
+        <td>ahh</td>
+        <td>495915</td>
+        <td></td>
+        <th>
+           <button class ="report-action" type="submit" onclick="window.location.href=''">Edit </button>
+           <button class ="report-action" type="submit" onclick="window.location.href=''"  style="background-color: red">Delete </button>   
+        </th>
+      </tr>
+  
+    </table>
+</div>
+
+<div id="footer"> </div>
+</div>
+
+<!-- JS script for tabifying red-flag and intervention records-->
+<script>
+function openRecord(evt, RecordName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(RecordName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
 
 </body>
 </html>
