@@ -5,3 +5,6 @@ any/every citizen to bring any form of corruption to the notice of appropriate a
 general public. Users can also report on things that needs government intervention 
 
 https://github.com/lesMus/ireporter.git 
+
+
+[![Build Status](https://travis-ci.com/lesMus/ireporter.svg?branch=develop)](https://travis-ci.com/lesMus/ireporter)
